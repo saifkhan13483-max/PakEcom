@@ -20,38 +20,54 @@ export default function Home() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[600px] md:h-[700px] bg-primary flex items-center overflow-hidden">
+        <section className="relative h-[650px] md:h-[800px] flex items-center overflow-hidden bg-black">
           <div className="absolute inset-0 z-0">
-             {/* Unsplash image: Pakistani traditional clothing details */}
-             {/* Photo by mozam zahid on Unsplash */}
             <img 
-              src="https://pixabay.com/get/g137b6ddad6ebfa7c2d9b592d1ed1e1dba8471856a812938cc42ff8a4a4f67dd7038054dd76392ce6e44bfb54295250926fb281985bb365619f1ce2ca4b2c493b_1280.jpg" 
-              alt="Hero Background" 
-              className="w-full h-full object-cover opacity-30"
+              src="/images/hero-pakistani-fashion.png" 
+              alt="High-end Pakistani Fashion" 
+              className="w-full h-full object-cover opacity-60 scale-105 animate-slow-zoom"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
           </div>
           
           <div className="container-custom relative z-10 text-white">
-            <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
-              <span className="text-secondary font-bold tracking-wider text-sm uppercase mb-4 block">Summer Collection 2024</span>
-              <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Elegance in Every <br /> <span className="text-secondary">Stitch</span>
+            <div className="max-w-3xl animate-in fade-in slide-in-from-left-8 duration-1000">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/30 backdrop-blur-md mb-6">
+                <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+                <span className="text-secondary font-bold tracking-widest text-xs uppercase">Premium Summer 2024</span>
+              </div>
+              <h1 className="font-display text-6xl md:text-8xl font-bold mb-6 leading-[1.1] tracking-tight">
+                Authentic <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary/80 to-secondary/40">
+                  Heritage
+                </span>
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-lg">
-                Discover our premium collection of handcrafted Kurtas, traditional footwear, and modern essentials designed for the contemporary Pakistani.
+              <p className="text-xl md:text-2xl text-white/80 mb-10 leading-relaxed max-w-xl font-light">
+                Experience the soul of Pakistan through our curated collection of artisanal Kurtas, luxury fabrics, and handcrafted footwear.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-6 items-center">
                 <Link href="/products">
-                  <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-bold px-8 h-14 rounded-full text-lg shadow-xl hover:scale-105 transition-transform">
-                    Shop Collection
+                  <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold px-10 h-14 rounded-full text-lg shadow-[0_0_20px_rgba(var(--secondary),0.3)] hover:scale-105 transition-all duration-300">
+                    Explore Shop
                   </Button>
                 </Link>
                 <Link href="/products?category=Men">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 hover:text-white font-semibold px-8 h-14 rounded-full text-lg">
+                  <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white hover:text-black font-semibold px-10 h-14 rounded-full text-lg backdrop-blur-sm transition-all duration-300">
                     Men's Edit
                   </Button>
                 </Link>
+              </div>
+              
+              <div className="mt-12 flex items-center gap-8 pt-12 border-t border-white/10">
+                <div className="flex -space-x-3">
+                  {[1,2,3,4].map(i => (
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-black bg-muted" />
+                  ))}
+                </div>
+                <p className="text-sm text-white/60">
+                  <span className="text-white font-bold">10k+</span> Happy Customers <br /> across Pakistan
+                </p>
               </div>
             </div>
           </div>
