@@ -32,21 +32,21 @@ export default function Home() {
           </div>
           
           <div className="container-custom relative z-10 text-white">
-            <div className="max-w-3xl animate-in fade-in slide-in-from-left-8 duration-1000">
+            <div className="max-w-3xl animate-in fade-in slide-in-from-left-8 duration-1000 text-left">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/30 backdrop-blur-md mb-6">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                 <span className="text-secondary font-bold tracking-widest text-xs uppercase">Premium Summer 2024</span>
               </div>
-              <h1 className="font-display text-6xl md:text-8xl font-bold mb-6 leading-[1.1] tracking-tight">
+              <h1 className="font-display text-6xl md:text-8xl font-bold mb-6 leading-[1.1] tracking-tight text-left">
                 Authentic <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary/80 to-secondary/40">
                   Heritage
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-white/80 mb-10 leading-relaxed max-w-xl font-light">
+              <p className="text-xl md:text-2xl text-white/80 mb-10 leading-relaxed max-w-xl font-light text-left">
                 Experience the soul of Pakistan through our curated collection of artisanal Kurtas, luxury fabrics, and handcrafted footwear.
               </p>
-              <div className="flex flex-wrap gap-6 items-center">
+              <div className="flex flex-wrap gap-6 items-center justify-start">
                 <Link href="/products">
                   <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold px-10 h-14 rounded-full text-lg shadow-[0_0_20px_rgba(var(--secondary),0.3)] hover:scale-105 transition-all duration-300">
                     Explore Shop
