@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Pakistani Green & Gold Theme */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  --background: 0 0% 100%;
+  --foreground: 120 40% 10%; /* Very dark green almost black */
+
+  --card: 0 0% 100%;
+  --card-foreground: 120 40% 10%;
+  --card-border: 120 10% 90%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 120 40% 10%;
+  --popover-border: 120 10% 90%;
+
+  /* Deep Green Primary #006400 -> HSL 120 100% 19.6% */
+  --primary: 120 100% 20%;
+  --primary-foreground: 0 0% 100%;
+  --primary-border: 120 100% 15%;
+
+  /* Gold Secondary #FFD700 -> HSL 51 100% 50% - tweaked for better text contrast */
+  --secondary: 48 90% 55%; 
+  --secondary-foreground: 120 100% 15%;
+  --secondary-border: 48 90% 45%;
+
+  --muted: 120 10% 96%;
+  --muted-foreground: 120 10% 40%;
+  --muted-border: 120 10% 90%;
+
+  --accent: 120 20% 93%;
+  --accent-foreground: 120 100% 20%;
+  --accent-border: 120 20% 85%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --destructive-border: 0 84% 50%;
+
+  --border: 120 10% 90%;
+  --input: 120 10% 90%;
+  --ring: 120 100% 20%;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-primary;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-all active:scale-95;
+  }
+
+  @keyframes slow-zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+
+  .animate-slow-zoom {
+    animation: slow-zoom 20s ease-in-out infinite alternate;
+  }
+}
